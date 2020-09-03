@@ -1,0 +1,69 @@
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+<%- include('partials/subheader'); -%>
+    
+<html lang="en">
+<div><font color="#4A4342 ">.</font>
+</div>
+<div><font color="#4A4342 ">.</font>
+</div>
+
+<div>
+     <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" style="text-align: center">Id</th>
+      <th scope="col" style="text-align: center">Question</th>
+      <th scope="col" style="text-align: center">Url</th>
+      <th scope="col" style="text-align: center">Category</th>
+      <th scope="col" style="text-align: center">Site</th>
+      <th scope="col" style="text-align: center">Done</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    
+          <% data.forEach(function (data) { %>
+                
+         <%  if(data.site=="topcoder"){ %>
+
+
+                <tr class="table-active">
+                <td style="text-align: center"><%= data.id %></td>   
+                <td style="text-align: center"><%= data.question %></td>
+                <td style="text-align: center" ><a href="<%= data.url %>"><%= data.url %></a></td> <!-- url is placed because of the distortion induced by original url when minimised in to half-->
+                <td style="text-align: center"><%= data.category %></td>  
+                <td style="text-align: center;"><%= data.site %></td>
+                <td style="text-align: center"><%= data.done %></td>
+            </tr>   
+               
+         <% }%>
+
+                 
+         <% }) %>
+    </tr>
+    
+    
+  </tbody>
+</table> 
+ </div>
+ <script src="../views/index/js/jquery-3.3.1.min.js"></script>
+  <script src="../views/index/js/jquery-ui.js"></script>
+  <script src="../views/index/js/popper.min.js"></script>
+  <script src="../views/index/js/bootstrap.min.js"></script>
+  <script src="../views/index/js/owl.carousel.min.js"></script>
+  <script src="../views/index/js/jquery.countdown.min.js"></script>
+  <script src="../views/index/js/bootstrap-datepicker.min.js"></script>
+  <script src="../views/index/js/jquery.easing.1.3.js"></script>
+  <script src="../views/index/js/aos.js"></script>
+  <script src="../views/index/js/jquery.fancybox.min.js"></script>
+  <script src="../views/index/js/jquery.sticky.js"></script>
+
+  
+  <script src="../views/index/js/main.js"></script>
+    </body>
+</html>
+
+
+                       
+                       <%- include('partials/footer'); -%>

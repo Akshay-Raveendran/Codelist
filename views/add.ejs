@@ -1,0 +1,76 @@
+<%- include('partials/subheader'); -%>
+    
+
+
+
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Add </h1>
+      
+      <form action="/users/add" method="POST">
+        <div class="form-group">
+          <label for="add">Question</label>
+          <input
+            type="question"
+            id="question"
+            name="question"
+            class="form-control"
+            placeholder="Question"
+          />
+        </div>
+        <div class="form-group">
+          <label for="url">Url</label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            class="form-control"
+            placeholder="Enter url"
+          />
+        </div>
+
+
+
+        <div class="form-group"><label for="category">Category</label>
+
+      <select id="category" name="category">
+      <option value="other">select</option>
+      <option value="array">array</option>
+      <option value = "bits">bits </option>
+      <option value="dp">dp</option>
+      <option value="binarytree">binary tree</option>
+      <option value="graph">graph</option>
+      </select>
+    </div>
+
+
+    <div class="form-group"><label for="site">site</label>
+
+      <select id="site" name="site">
+      <option value="g4g">g4g</option>
+      <option value="leetcode">leetcode</option>
+      <option value="codechef">codechef</option>
+      <option value="hackerrank">hackerrank</option>
+      </select>
+    </div>
+
+     <div class="form-group"><label for="done">Done</label>
+
+      <select id="done" name="done">
+      <option value="yes">yes</option>
+      <option value="no">no</option>
+      
+      </select>
+    </div>
+
+
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
